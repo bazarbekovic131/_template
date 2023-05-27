@@ -7,16 +7,107 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\begingroup
-\thispagestyle{empty}
-\AddToShipoutPicture*{\put(0,-300){\includegraphics[scale=0.6]{cover}}} % Image background
-\centering
-\vspace*{5cm}
-\endgroup
+%\begingroup
+%\thispagestyle{empty}
+%\AddToShipoutPicture*{\put(0,-300){\includegraphics[scale=0.6]%{cover}}} % Image background
+%\centering
+%\vspace*{5cm}
+%\endgroup
 
 %----------------------------------------------------------------------------------------
 \newpage
 \pdfbookmark[section]{\contentsname}{toc}
 \tableofcontents
 \pagebreak
+
+\chapter{Einstein's Relativity Theory}
+
+The general Theory of Relativity describes the accelerated frames (Bezugssysteme) and therefore also the gravitation.
+
+Bezugssystem is the part of coordinate systems that are at rest relative to each other. The frame where the Newton's axioms work is called the inertial frame (Inertialsystem). 
+
+If some inertial frames are moving to each other, there cannot be conducted any mechanical experiment that allows us to determine which frame is moving and which one stays at rest and whether both of them are moving. This result is formulated by \emph{Newton's Relativity Principle}:
+\thm{Newton'sches Relativitätsprinzip (Newton's Relativity Principle)}{The absolute movement can not be measured}
+
+However, scientists began to question this theory from the 19. century, having a point that it can be indeed obtained by measuring the light speed.
+
+\thm{Einstein'sche Postulate (Einstein's Postulates)}{
+\begin{itemize}
+    \item 1. Postulate: Absolute and uniform motion cannot be measured
+    \item 2. Postulate: The speed of light doesn't depend on the motion state of the light source
+    \item 2. Postulate (Alternative): Each observer misst the value for the light-speed in the vacuum.
+\end{itemize}
+}
+
+\thm{Galilei-Transformation}{
+\begin{equation}
+\begin{aligned}
+    x^{(a)} &= x^{(b)} + v^{(a)}_b \cdot t^{(b)}, && y^{(a)} &= y^{(b)}, \\
+    z^{(a)} &= z^{(b)}, && t^{(a)} &= t^{(b)}
+\end{aligned}
+\label{eq:galileo}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+    x^{(b)} &= x^{(a)} - v^{(a)}_b \cdot t^{(b)}, && y^{(b)} &= y^{(a)}, \\
+    z^{(b)} &= z^{(a)}, && t^{(b)} &= t^{(a)}
+\end{aligned}
+\label{eq:galileo_inverse}
+\end{equation}
+}
+\newpage
+\thm{Lorentz-Transformation}{
+\begin{equation}
+\begin{aligned}
+    x^{(a)} &= \gamma \left(x^{(b)} + v^{(a)}_b t^{(b)}\right), \\
+    y^{(a)} &= y^{(b)}, \\
+    z^{(a)} &= z^{(b)}, \\
+    t^{(a)} &= \gamma \left(t^{(b)} + \frac{v^{(a)}_b x^{(b)}}{c^2}\right)
+\end{aligned}
+\label{eq:lorentz_transformation}
+\end{equation}
+}
+
+\section{Time Dilation (Zeitdilatation)}
+Betrachten wir zwei Ereignisse. In the Frame $S_b$ in two different time points $t_1^{(b)} \ \textrm{and} \ t_2^{(b)}$ on the point $x_0^{(b)}$. With the help of Lorentz-Transformation we can confirm the times $t_1^{(a)}$ and $t_2^{(a)}$ are:
+\begin{equation}
+\begin{aligned}
+    t_1^A &= \gamma \left(t_1^B + \frac{v_B^A x_0^B}{c^2}\right) \\
+    t_2^A &= \gamma \left(t_2^B + \frac{v_B^A x_0^B}{c^2}\right)
+\end{aligned}
+\end{equation}
+
+The interval $t_2^A - t_1^A$ is equal to the Eigenzeit \emph{$\Delta t_{eigen}$}. The corresponding time is then $\Delta t = \gamma \Delta t_{eigen}$.
+
+Time dilation can be obtained directly from Einstein's Postulates. For the observer standing in distance d from the mirror, time interval is between send of light beam and its return due to reflection on the mirror. All is happening the frame $S_B$, where the mirror is at rest in space of frame.
+\begin{equation*}
+    \Delta t^B = \frac{2d}{c} 
+\end{equation*}
+
+Consider now the same event in another frame $S_A$, where the Observer B and the mirror are moving with speed $v_B^A$. The path traced by light is clearly longer in $S_A$ than in $S_B$. According to Einstein's second postulate, however, light always propagates with the same speed in both frames. So, light clearly needs more time to cover the path in the frame $S_A$ than in $S_B$, and therefore time interval will be bigger.
+\begin{equation*}
+    \left(\frac{c\Delta t^a}{2}\right)^2 = d^2 + \left(\frac{v_b^a \Delta t^a}{2}\right)^2
+\end{equation*}
+After some derivation,
+\begin{equation*}
+    \Delta t^A = \frac{\Delta t^B}{\sqrt{1-\beta^2}} = \gamma \Delta t^B
+\end{equation*}
+
+\section{Längenkontraktion (Length Contraction)}
+Length contraction is the phenomenon that is closely bounded with time dilation. The length of an object in the inertial system where it is located is called eigenlänge. In all inertial systems, where the object moves parallel to its length, is the measured length shorter than eigenlänge.
+The length of rod in the frame $S_A$ when the rod is in other frame that moves relative to the named frame is \( l^{(A)} = x_2^{(A)} - x_1^{(A)}\). Inverse Lorentz-Transformation is used to determine positions of $x^{(A)}$ in endpoints of the time interval.
+\[ l_{eigen} = x_2^{(B)} - x_1^{(B)} = \gamma (x_2^{(A)} - x_1^{(A)})\]
+Solving for $x_2^{A} - x_1^{(A)}$ yields \(l = x_2^{(A)} - x_1^{(A)} = \frac{1}{\gamma} (x_2^{(B)} - x_1^{(B)})\)
+\thm{Längekontraktion (Length Contraction) (or Lorentz-FitzGerald Contraction)}{
+\begin{equation}
+    l = \frac{1}{\gamma} l_{eigen} = l_{eigen} \sqrt{1-\beta^2}
+\end{equation}
+}
+\subsection{Zerfallen der Myonen}
+Myons decay by the following law:
+\[N(t) = N_0 \exp{\frac{-t}{\tau}}\]
+where timelife $\tau$ is around $2.2 \mu s$. However, since it has a speed of $\beta = 0.9978$, its timelife on Earth would be $33 \mu s$, so it covers 10 000m instead of 660 in frame of Earth.
+\section{Doppler-Effect of Light (Relativistischer Doppler-Effekt)}
+For the light and other electromagnetic waves in vacuum it gives no difference whether the source and the observer move relative to each other or not. Therefore, Doppler-Effect defined for waves earlier cannot account for the light, because the time intervals for the observer and the source were identical earlier, while it is not the case here.
 \end{document}
